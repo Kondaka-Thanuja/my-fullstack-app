@@ -10,7 +10,10 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*", // Allow requests from any domain; replace with your frontend URL for production
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 // Routes
