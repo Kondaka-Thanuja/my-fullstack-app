@@ -1,0 +1,96 @@
+/* Whole page dark background */
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(27, 27, 27);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Heading styling */
+.heading {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+/* Container for both boxes */
+.search-panel {
+  display: flex;
+  justify-content: center;
+  gap: 30px;              /* space between cards */
+  margin-top: 50px;
+  flex-wrap: wrap;        /* responsive: stack on smaller screens */
+}
+
+/* Card styling */
+.search-panel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgb(31, 30, 30);
+  color: white;
+
+  padding: 25px 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+  max-width: 500px;
+  width: 400px;           /* equal width for both */
+  min-height: 350px;      /* base height */
+  height: auto;           /* grow if content is more */
+  gap: 15px;
+  overflow: visible;
+}
+
+/* Card headings and text */
+.search-panel-content h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.search-panel-content h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.search-panel-content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.search-panel-content p {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* Default button styling */
+.search-panel-content button {
+  background-color: skyblue;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Upgrade button (larger) */
+.search-panel-content button.upgrade-btn {
+  padding: 14px 35px;      /* bigger padding */
+  font-size: 18px;         /* bigger text */
+  font-weight: bold;
+}
+
+.search-panel-content button:hover {
+  background-color: deepskyblue;
+  transform: scale(1.05);
+}

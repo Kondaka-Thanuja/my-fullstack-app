@@ -1,0 +1,182 @@
+/* Reset default browser margins and full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Background only for this component, full viewport */
+.screen-page {
+  background: rgb(27, 27, 27);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Heading */
+#heading {
+  font-size: 60px;
+  margin-bottom: 25px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Spacing below textarea */
+.place {
+  margin-bottom: 200px;
+}
+
+/* Textarea wrapper */
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Textarea styling */
+.input-wrapper textarea {
+  width: 800px;
+  height: 150px;
+  padding: 20px;
+  padding-bottom: 60px;
+  border: 1px solid #838080;
+  border-radius: 25px;
+  font-size: 20px;
+  background-color: rgb(43, 41, 41);
+  color: white;
+  outline: none;
+  resize: none;
+}
+
+/* Icons container */
+.icons {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  display: flex;
+  gap: 12px;
+  color: #aaa;
+  font-size: 22px;
+  background: rgb(22, 22, 22);
+  border-radius: 25px;
+  padding: 15px 20px;
+}
+
+/* Individual icon hover effect */
+.icon {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: skyblue;
+  transform: scale(1.05);
+}
+
+.icon-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.search-panel {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.right-icons {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  color: #aaa;
+  font-size: 22px;
+}
+
+/* Add hover effect like left icons */
+.right-icons svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right-icons svg:hover {
+  background: skyblue;
+  border-radius: 50%;
+  transform: scale(1.05);
+}
+
+/* ----------------- RESPONSIVE STYLES ----------------- */
+@media (max-width: 1024px) {
+  .input-wrapper textarea {
+    width: 600px;
+    font-size: 18px;
+  }
+
+  #heading {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-wrapper textarea {
+    width: 90%; /* almost full width on mobile */
+    font-size: 16px;
+  }
+
+  #heading {
+    font-size: 36px;
+  }
+
+  .icons, .right-icons {
+    font-size: 18px;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .place {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  #heading {
+    font-size: 28px;
+  }
+
+  .input-wrapper textarea {
+    font-size: 14px;
+    padding: 15px;
+    padding-bottom: 60px; /* space for icons below */
+    width: 100%;
+  }
+
+  /* Move icons below textarea */
+  .icons, .right-icons {
+    position: relative; /* remove absolute positioning */
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
+    background: transparent;
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; /* wrap if too many icons */
+    font-size: 16px;
+  }
+}

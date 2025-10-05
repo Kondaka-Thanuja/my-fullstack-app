@@ -1,0 +1,236 @@
+/* Sidebar container */
+.sidebar {
+  width: 100px;
+  height: 100vh; /* full viewport height */
+  background-color: rgb(41, 40, 40);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Perplexity logo at top */
+.sidebar-logo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-logo:hover {
+  color: #1e90ff;
+}
+
+/* Menu container */
+.sidebar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+  flex: 1;
+  gap: 50px;
+}
+
+/* Menu items */
+.menu-circle,
+.menu-Home,
+.menu-globe,
+.menu-square,
+.menu-bell {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #aaa;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.menu-circle svg,
+.menu-Home svg,
+.menu-globe svg,
+.menu-square svg,
+.menu-bell svg {
+  font-size: 50px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects */
+.menu-circle:hover,
+.menu-Home:hover,
+.menu-globe:hover,
+.menu-square:hover,
+.menu-bell:hover {
+  color: skyblue;
+}
+
+.menu-circle:hover svg,
+.menu-Home:hover svg,
+.menu-globe:hover svg,
+.menu-square:hover svg,
+.menu-bell:hover svg {
+  transform: scale(1.2);
+}
+
+/* Flyout submenu - full height of sidebar */
+.flyout {
+  position: fixed;     /* fixed so it spans full sidebar height */
+  top: 0;
+  left: 100px;         /* right side of sidebar */
+  width: 220px;
+  height: 100vh;       /* full height of viewport */
+  background-color: rgb(27, 27, 27);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* Flyout items */
+.flyout ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flyout ul li {
+  padding: 12px 15px;
+  color: #ffffffcc;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.flyout ul li:hover {
+  background-color: #2a2a3f;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Notifications at bottom */
+.menu-bell {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 80px;
+  }
+  .flyout {
+    left: 80px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding-top: 15px;
+  }
+
+  .menu-circle svg,
+  .menu-Home svg,
+  .menu-globe svg,
+  .menu-square svg,
+  .menu-bell svg {
+    font-size: 35px;
+  }
+
+  .flyout {
+    left: 60px;
+    width: 180px;
+  }
+}
+
+/* Remove default link styles in sidebar flyout */
+.sidebar .flyout ul li a {
+  color: #ccc;          
+  text-decoration: none; 
+  display: block;        
+  width: 100%;
+}
+
+/* Hover effect for submenu links */
+.sidebar .flyout ul li a:hover {
+  color: skyblue;        
+  background-color: #1f1e1e;
+  border-radius: 6px;
+  padding: 10px 14px;    
+}
+
+/* ----------------- MOBILE RESPONSIVE ----------------- */
+@media (max-width: 480px) {
+  /* Shrink sidebar */
+  .sidebar {
+    width: 50px;
+    padding-top: 10px;
+    transform: translateX(-100%); /* hide sidebar offscreen */
+    transition: transform 0.3s ease;
+  }
+
+  /* Reduce icon size */
+  .menu-circle svg,
+  .menu-Home svg,
+  .menu-globe svg,
+  .menu-square svg,
+  .menu-bell svg {
+    font-size: 25px;
+  }
+
+  /* Hide text labels */
+  .menu-circle span,
+  .menu-Home span,
+  .menu-globe span,
+  .menu-square span,
+  .menu-bell span {
+    display: none;
+  }
+
+  /* Hide flyout submenu on mobile */
+  .flyout {
+    display: none;
+  }
+
+  /* Reduce spacing in sidebar menu */
+  .sidebar-menu {
+    gap: 30px;
+  }
+
+  /* Mobile hamburger icon */
+  .mobile-hamburger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  /* Show sidebar when mobileOpen state is true */
+  .sidebar.sidebar-mobile-open {
+    transform: translateX(0);
+  }
+}
+
+/* Hide hamburger on larger screens */
+.mobile-hamburger {
+  display: none;
+}

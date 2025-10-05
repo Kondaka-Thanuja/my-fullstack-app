@@ -1,0 +1,112 @@
+.register-container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.register-input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.register-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #45a049;
+}
+
+.register-login-text {
+  margin-top: 15px;
+  color: #555;
+}
+
+.register-login-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+  .register-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .register-title {
+    font-size: 22px;
+  }
+
+  .register-input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .register-button {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .register-login-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    width: 95%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .register-title {
+    font-size: 20px;
+  }
+
+  .register-input {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .register-button {
+    font-size: 14px;
+    padding: 7px;
+  }
+
+  .register-login-text {
+    font-size: 13px;
+  }
+}

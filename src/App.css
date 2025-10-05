@@ -1,0 +1,11 @@
+.app-container {
+  display: flex;      /* align sidebar and main content side by side */
+  height: 100vh;      /* full viewport height */
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;            /* take remaining space */
+  background-color: rgb(27, 27, 27); /* match your screen background */
+  overflow-y: auto;   /* allow scrolling if content overflows */
+}

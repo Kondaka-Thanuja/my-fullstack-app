@@ -1,0 +1,132 @@
+/* Full page black */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.heading h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.heading h3 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Main Box (Pricing container) */
+.main-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    padding: 0 20px;
+    align-items: stretch; /* equal height */
+}
+
+/* Individual Pricing Boxes */
+.left-box, .right-box {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 25px;
+    width: 350px;       /* same width */
+    min-height: 500px;  /* equal height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-box:hover, .right-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 6px 18px rgba(255, 255, 255, 0.1);
+}
+
+/* Highlight "Pro" Popular Button */
+#btn {
+    background-color: #ff9800;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 5px 12px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Get Pro / Get Max Buttons */
+.main-btn {
+    background-color: skyblue;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: deepskyblue;
+    transform: scale(1.05);
+}
+
+/* List inside cards */
+.list {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.list ul {
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+.home_btn {
+    position: absolute;    /* or fixed if you want it to stay on scroll */
+    top: 20px;              /* distance from the top */
+    right: 20px;            /* distance from the right */
+    display: flex;
+    flex-direction: column; /* optional if you have multiple elements inside */
+}

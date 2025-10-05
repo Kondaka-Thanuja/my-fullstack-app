@@ -1,0 +1,60 @@
+.search-panel-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(31, 30, 30);  /* dark card background */
+  color: white;
+  padding: 20px 30px;                 /* reduced padding for smaller height */
+  border-radius: 25px;                /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle shadow */
+  
+  max-width: 500px;                   /* increased width */
+  width: 500px;                        /* fixed width */
+  height: 250px;                       /* decreased height */
+  margin: 20px auto;                  /* center horizontally */
+  gap: 15px;                          /* spacing between elements */
+  overflow: hidden;                   /* prevent overflow */
+}
+
+.search-panel-content h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.search-panel-content h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ccc;                        
+  margin-bottom: 15px;
+}
+
+.search-panel-content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.search-panel-content p {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.search-panel-content button {
+  background-color: skyblue;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;                   /* smaller padding */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-panel-content button:hover {
+  background-color: deepskyblue;
+  transform: scale(1.05);
+}
+.heading{
+  margin-top:0px;
+}
