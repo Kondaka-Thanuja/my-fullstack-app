@@ -1,5 +1,14 @@
-node_modules/ 
-frontend/node_modules/ 
-server/node_modules/ 
-frontend/build/ 
-server/.env 
+# Node modules
+server/node
+frontend/project/node_modules
+
+# Environment variables
+server/.env
+frontend/project/.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
