@@ -3,10 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
-// Use localhost for testing, replace with deployed backend URL when live
-// const API_URL = "http://localhost:5000/api/auth";
-// const API_URL = "http://localhost:5000/api/auth";
-const API_URL = "https://<your-backend-service>.up.railway.app/api/auth";
+const API_URL = "https://backend-perplexity.onrender.com/";
 
 
 
