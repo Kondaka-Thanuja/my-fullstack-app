@@ -1,5 +1,5 @@
 import React from "react";
-import './top.css'
+import './Top.css'
 const Top=()=>{
     return(
         <div className="top">
