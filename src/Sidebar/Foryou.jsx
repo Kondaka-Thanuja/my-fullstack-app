@@ -1,5 +1,5 @@
 import React from "react";
-import './foryou.css'
+import './Foryou.css'
 
 const Foryou=()=>{
     return(
