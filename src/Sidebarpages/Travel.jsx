@@ -1,5 +1,5 @@
 import React from "react";
-import './travel.css'
+import './Travel.css'
 
 const Travel=()=>{
     return(
