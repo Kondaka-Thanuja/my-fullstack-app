@@ -1,5 +1,5 @@
 import React from "react";
-import './finance.css'
+import './Finance.css'
 const Finance =()=>{
     return(
         <div className="finance">
