@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Register.css";
 
 
-const API_URL = "https://backend-perplexity.onrender.com/";
+const API_URL = "https://backend-perplexity.onrender.com";
 
 
 
