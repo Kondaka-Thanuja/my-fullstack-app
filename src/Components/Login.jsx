@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
-const API_URL = "https://backend-perplexity.onrender.com/";
+const API_URL = "https://backend-perplexity.onrender.com";
 
 
 
