@@ -1,5 +1,5 @@
 import React from "react"
-import './acadamics.css'
+import './Acadamics.css'
 
 const Acadamics =()=>{
     return(
